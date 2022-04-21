@@ -3,7 +3,7 @@
    <h1> Welcome to 1 {{ title }}! </h1> 
 </div>
 <div> Months : 
-   <select> 
+   <select (change) = "changemonths($event)"> 
       <option *ngFor = "let i of months">{{i}}</option> 
    </select> 
 </div> 
@@ -20,4 +20,7 @@
    <ng-template #condition1>Condition is valid</ng-template> 
    <ng-template #condition2>Condition is invalid</ng-template> 
 </div>
+<button (click) = "myClickFunction($event)">
+   Click Me
+</button>
 <router-outlet></router-outlet>
